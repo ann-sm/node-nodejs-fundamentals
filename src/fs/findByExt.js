@@ -15,7 +15,6 @@ const findByExt = async () => {
 
     const args = process.argv;
     const ext = args.slice(args.findIndex(arg => arg.startsWith('--ext')) + 1)[0] || 'txt';
-    console.log(`Extension: ${ext}`);
 
     const scanDir = async (dir) => {
       const files = await fs.readdir(dir, { withFileTypes: true });

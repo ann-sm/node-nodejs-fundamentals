@@ -1,4 +1,4 @@
-import readline from "readline";
+import readline from 'readline';
 
 const interactive = () => {
   const rl = readline.createInterface({

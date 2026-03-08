@@ -7,8 +7,8 @@ const merge = async () => {
     const __dirname = path.dirname(__filename);
   
     const workspaceDir = path.resolve(__dirname, '../../workspace');
-    const partsDir = path.join(workspaceDir, "parts");
-    const outputFile = path.join(workspaceDir, "merged.txt");
+    const partsDir = path.join(workspaceDir, 'parts');
+    const outputFile = path.join(workspaceDir, 'merged.txt');
 
     try {
       await fs.access(partsDir);
@@ -16,7 +16,7 @@ const merge = async () => {
       const files = await fs.readdir(partsDir);
 
       const args = process.argv;
-      const filesIndex = args.indexOf("--files");
+      const filesIndex = args.indexOf('--files');
 
       let filesList = [];
 

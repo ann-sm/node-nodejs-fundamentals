@@ -49,7 +49,7 @@ const snapshot = async () => {
       entries
     };
 
-    const snapshotPath = path.resolve(__dirname, "../../snapshot.json");
+    const snapshotPath = path.resolve(__dirname, '../../snapshot.json');
     await fs.writeFile(snapshotPath, JSON.stringify(snapshotData, null, 2));
   }
   catch {

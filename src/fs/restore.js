@@ -6,8 +6,8 @@ const restore = async () => {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
 
-  const snapshotPath = path.resolve(__dirname, "../../snapshot.json");
-  const restoreDir = path.resolve(__dirname, "../../workspace_restored");
+  const snapshotPath = path.resolve(__dirname, '../../snapshot.json');
+  const restoreDir = path.resolve(__dirname, '../../workspace_restored');
 
   try {
     await fs.access(snapshotPath);
@@ -22,7 +22,7 @@ const restore = async () => {
       }
     }
 
-    const snapshotFile= await fs.readFile(snapshotPath, "utf-8");
+    const snapshotFile= await fs.readFile(snapshotPath, 'utf-8');
     const snapshot = JSON.parse(snapshotFile);
 
     await fs.mkdir(restoreDir);
